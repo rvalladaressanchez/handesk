@@ -78,7 +78,7 @@ return [
         'string'  => 'El campo :attribute debe tener :size caracteres.',
         'array'   => 'El campo :attribute debe contener :size elementos.',
     ],
-    'string'   => 'El campo :attribute debe ser una cadena.',
+    'string'   => 'El campo :attribute debe ser texto.',
     'timezone' => 'El campo :attribute debe ser una zona válida.',
     'unique'   => 'El campo :attribute ya ha sido tomado.',
     'url'      => 'El formato de :attribute es inválido.',
