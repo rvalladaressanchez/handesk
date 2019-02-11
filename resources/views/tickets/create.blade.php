@@ -10,14 +10,14 @@
     <div class="comment description actions">
         <table class="maxw600 no-padding">
             <tr><td class="w20"><b> {{ __('ticket.requester') }}:</b></td></tr>
-            <tr><td>{{ __('user.name')  }}: </td><td class="w100"><input type="name"  name="requester[name]"  class="w100" required></td></tr>
-            <tr><td>{{ __('user.email') }}: </td><td class="w100"><input type="email" name="requester[email]" class="w100" required></td></tr>
+            <tr><td>{{ __('user.name')  }}: </td><td class="w100"><input type="name"  name="requester[name]"  class="w100" readonly required value="{{ auth()->user()->name }}"></td></tr>
+            <tr><td>{{ __('user.email') }}: </td><td class="w100"><input type="email" name="requester[email]" class="w100" readonly required value="{{ auth()->user()->email }}"></td></tr>
         </table>
     </div>
 
     <div class="comment new-comment">
         <table class="maxw600 no-padding">
-            <tr><td class="w20">{{ __('ticket.subject') }}: </td>     <td><input name="title" class="w100" required/></td></tr>
+            <tr><td class="w20">{{ __('ticket.subject') }}: </td>     <td><input autofocus name="title" class="w100" required/></td></tr>
             <tr><td>{{ trans_choice('ticket.tag', 2)}}: </td><td><input     name="tags" id="tags"/></td></tr>
             <tr><td>{{ __('ticket.comment')         }}: </td><td><textarea  name="body" required></textarea></td></tr>
             @include('components.assignTeamField')
