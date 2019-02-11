@@ -8,7 +8,7 @@
                 {{ csrf_field() }}
 
                 <div class="m3">
-                    <input id="email" type="email" class="w80" name="email" value="{{ old('email') }}" required autofocus>
+                    <input id="email" placeholder="Email" type="email" class="w80" name="email" value="{{ old('email') }}" required autofocus>
                     @if ($errors->has('email'))
                         <br>
                         <span class="help-block">
@@ -18,7 +18,7 @@
                 </div>
 
                 <div class="m3">
-                    <input id="password" type="password" class="w80" name="password" required>
+                    <input id="password" placeholder="Contraseña" type="password" class="w80" name="password" required>
                     @if ($errors->has('password'))
                         <span class="help-block">
                             <strong>{{ $errors->first('password') }}</strong>
