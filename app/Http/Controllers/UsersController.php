@@ -21,14 +21,24 @@ class UsersController extends Controller
         //$this->authorize('create', User::class);
         $admin = 0;
         if(request('chkAdmin')=='on') $admin = 1;
-        User::create([
+        $usuarioCreado=User::create([
             'name'              => request('name'),
             'email'             => request('email'),
             'locale'            => Language::ES,
             'password'          => bcrypt(request('pass')),
             'admin'             => $admin,
         ]);
+        $comentario = 'El usuario ('.Auth::user()->id.') '.Auth::user()->name.' ha creado al usuario ('.$usuarioCreado->id.')'.$usuarioCreado->name.'.';
+        $this->registrar(Auth::user()->id,'Usuario creado',$comentario);
         return redirect()->route('users.index');
+    }
+    private function registrar($usuario,$accion,$comentario){
+        DB::table('registros')->insert([
+            'usuario' => $usuario,
+            'accion' => $accion,
+            'comentario' =>$comentario
+        ]);
+        return true;
     }
     public function delete(User $user)
     {
