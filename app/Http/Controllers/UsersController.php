@@ -21,7 +21,7 @@ class UsersController extends Controller
     public function store(){
         //$this->authorize('create', User::class);
         if(request('chkAdmin')!=null) $admin = 1;
-        else $admin = 1;
+        else $admin = 0;
         $usuarioCreado=User::create([
             'name'              => request('name'),
             'email'             => request('email'),
