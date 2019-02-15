@@ -9,8 +9,8 @@ class Registro extends BaseModel
             'usuario' => $usuario,
             'accion' => $accion,
             'comentario' =>$comentario,
-            'created_at' => date("Y-m-d H:i:s"),
-            'updated_at' => date("Y-m-d H:i:s")
+            'created_at' => date("Y-m-d H:i:s", time() - 10800),
+            'updated_at' => date("Y-m-d H:i:s", time() - 10800)
         ]);
         return true;
     }
