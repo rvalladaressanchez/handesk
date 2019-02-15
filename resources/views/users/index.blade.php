@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <div class="description">
-        <h3>Agents ( {{ $users->count() }} )</h3>
+        <h3>Usuarios ( {{ $users->count() }} )</h3>
     </div>
 
     @paginator($users)
