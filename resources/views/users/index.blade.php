@@ -5,6 +5,11 @@
     </div>
 
     @paginator($users)
+    @if(auth()->user()->admin)
+        <div class="m4">
+            <a class="button " href="{{ route("users.create") }}">@icon(plus) Nuevo usuario</a>
+        </div>
+    @endif
     <table class="striped">
         <thead>
         <tr>
@@ -14,6 +19,7 @@
             <th> {{ trans_choice('team.team',2) }}      </th>
             <th colspan="2"></th>
         </tr>
+        
         </thead>
         <tbody>
         @foreach($users as $user)
@@ -25,7 +31,7 @@
                 <td>
                     <a href="{{ route('users.impersonate', $user) }}">@icon(key) Impersonar</a>
                     ||
-                    <a href="{{ route('users.destroy', $user) }}" class="delete-resource">@icon(trash) Eliminar</a>
+                    <a href="{{ route('users.delete', $user) }}">@icon(trash) Eliminar</a>
                 </td>
             </tr>
         @endforeach
