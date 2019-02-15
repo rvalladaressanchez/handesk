@@ -1,7 +1,7 @@
 <?php
 
 namespace App;
-
+use DB;
 class Registro extends BaseModel
 {
     public static function registrar($usuario, $accion, $comentario){
