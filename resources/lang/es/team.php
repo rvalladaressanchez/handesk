@@ -4,7 +4,7 @@ return [
     'team'                  => 'Equipo|Equipos',
     'member'                => 'Miembro|Miembros',
     'invitationLink'        => 'Link de invitación',
-    'invitationLinkDesc'    => 'Invita más agentes a este equipo enviando este link, si aún no tienen una cuenta, usa el link de registro',
+    'invitationLinkDesc'    => 'Invita más usuarios a este equipo enviando este link, si aún no tienen una cuenta, usa el link de registro',
     'join'                  => 'Únete',
     'invitedTitle'          => 'Estás invitado a unirte al equipo :team',
     'invitedDesc'           => 'Uniéndote a este equipo, vas a ser capaz de ver y actualizar los tíquets de soporte. También podrás asignarlos a otros miembros de tu equipo',

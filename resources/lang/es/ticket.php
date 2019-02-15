@@ -13,7 +13,7 @@ return [
     'requester'  => 'Solicitante',
     'date'       => 'Fecha',
     'team'       => 'Equipo',
-    'user'       => 'Agente|Agentes',
+    'user'       => 'Usuario|Usuarios',
     'recent'     => 'Actualizado recientemente',
     'requested'  => 'Solicitado',
     'updated'    => 'Actualizado',
