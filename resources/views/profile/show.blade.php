@@ -4,7 +4,7 @@
         <h3> {{ __('user.profile') }}</h3>
     </div>
 
-    <div class="description actions comment mb4">
+    <div class="description">
         <div class="float-left ml4  shadow-outer-1 circle">@gravatar($user->email, 90)</div>
         <h3 class="ml4 float-left"> @if($user->assistant) <span class="gold">@icon(star)</span> @endif {{ $user->name }}</h3>
         <div class="clear-both mb-5"> </div>
@@ -17,7 +17,7 @@
         <table class="maxw600">
             <tr><td> {{ __('user.name')     }}: </td><td class="w60">{{ Form::text('name',                     $user->name,    ["class" => "w100"]) }}</td></tr>
             <tr><td> {{ __('user.email')    }}: </td><td class="w60">{{ Form::email('email',                   $user->email,   ["class" => "w100"]) }}</td></tr>
-            <tr><td> {{ __('user.language') }}: </td><td>{{ Form::select('locale', App\Language::available(),   $user->locale                       ) }}</td></tr>
+            <!--<tr><td> {{ __('user.language') }}: </td><td>{{ Form::select('locale', App\Language::available(),   $user->locale                       ) }}</td></tr>-->
             <tr><td></td></tr>
             <tr><td><H2>{{ trans_choice('user.notification', 2) }}</H2></td></tr>
             <tr><td>{{ __('user.newTicketNotification')     }}  </td><td> {{ Form::checkbox('new_ticket_notification',true, $user->settings->new_ticket_notification) }}</td></tr>
